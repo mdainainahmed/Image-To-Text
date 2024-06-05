@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract Text from Image</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>ImageToText</h1>
+    </header>
+    <main>
+        <section id="upload-section">
+            <h2>Choose Image</h2>
+            <form action="/extracttextfromimage" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="imageInput" accept="image/*" required>
+                <button type="submit">Extract Text</button>
+            </form>
+        </section>
+        <section id="output-section">
+            <h2>Extracted Text</h2>
+            <div id="processing" class="hidden">Processing...</div>
+            <pre id="extractedText"><%= data %></pre>
+        </section>
+    </main>
+</body>
+
+</html>
